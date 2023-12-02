@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        function registerclick() {
+            document.getElementById("lblcustomer").innerHTML = document.getElementById("txtcustomer").value;
+            document.getElementById("lbldate").innerHTML = document.getElementById("txtdate").value;
+            document.getElementById("lbldays").innerHTML = document.getElementById("txtdays").value;
+            document.getElementById("lblperson").innerHTML = document.getElementById("txtperson").value;
+
+            var dlximg = document.getElementById("dlximg");
+            var suiteimg = document.getElementById("suiteimg");
+            var chkdlx = document.getElementById("chkdlx");
+            var chksuite = document.getElementById("chksuite");
+
+            var roomcost = 0;
+            var roomname = "";
+
+            if (chkdlx.checked) {
+                imghotel.src = "../public/images/delux room.jpg";
+                roomname = "delux room";
+                roomcost = 2500;
+
+
+            }
+            if (chksuite.checked) {
+                imghotel.src = "../public/images/suite room.jpg";
+                roomname = "suite room";
+                roomcost = 4000;
+
+            }
+
+            var amenitiescost = 0;
+            var amenitiesname = "";
+            if (chkac.checked) {
+                amenitiescost = 1000;
+                amenitiesname = "AC";
+                roomcost += amenitiescost;
+
+            }
+            if (chklocker.checked) {
+                amenitiescost = 300;
+                amenitiesname = "locker";
+                roomcost += amenitiescost;
+            }
+            var tdays = document.getElementById("txtdays").value;
+            document.getElementById("lblroom").innerHTML = roomname;
+            document.getElementById("lblamenities").innerHTML = amenitiesname;
+
+            var total = parseInt(document.getElementById("txtdays").value) * roomcost;
+document.getElementById("lbltotal").innerHTML=total;
+
+            var balance= parseInt(document.getElementById("txtdays").value) * roomcost - document.getElementById("txtadvance").value;
+
+            document.getElementById("lblbalance").innerHTML = balance;
+
+
+            document.getElementById("lbladvance").innerHTML = document.getElementById("txtadvance").value;
+
+        }
+    </script>
+</head>
+
+<body class="container-fluid ">
+    <header>
+        <h3 class="text-center m-3">Hotel Registration Form</h3>
+    </header>
+    <div class="accordion" id="kfc">
+        <div class="acording-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#customer" data-bs-toggle="collapse">Customer
+                    Info</button>
+
+            </div>
+        </div>
+
+        <div class="accordion-collapse collapse" id="customer" data-bs-parent="#kfc">
+            <div class="accordion-body">
+                <div class="row bg-dark text-white p-3">
+                    <div class="col p-4 fs-5">
+                        <dt class="mb-2 ">Customer Name :</dt> <br>
+                        <dt class="mb-2 ">Check In Date :</dt> <br>
+                        <dt class="mb-2 ">Total No Of Day :</dt> <br>
+                        <dt class="mb-2 ">Total No Of Person :</dt>
+
+                    </div>
+                    <div class="col w-50 p-4">
+                        <dd><input id="txtcustomer" class="mb-2 form-control" type="text" name="" id=""></dd><br>
+                        <dd><input id="txtdate" class="mb-2 form-control" type="date" name="" id=""></dd><br>
+                        <dd><input id="txtdays" class="mb-2 form-control" type="number" name="" id=""></dd><br>
+                        <dd><input id="txtperson" class="mb-2 form-control" type="number" name="" id=""></dd>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--select room-->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100 mt-1" data-bs-target="#room" data-bs-toggle="collapse">Select Room
+                    Type</button>
+            </div>
+            <div class="accordion-collapse collapse" id="room" data-bs-parent="#kfc">
+                <div class="acordin-body mt-2 p-2 text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img id="dlximg" src="../public/images/delux room.jpg" width="140px" height="140px" alt="">
+                            <div><input type="radio" name="room" id="chkdlx"> delux room
+                                <span class="bi bi-currency-rupee">2500/-</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img id="suiteimg" src="../public/images/suite room.jpg" width="140px" height="140px"
+                                alt="">
+                            <div><input type="radio" name="room" id="chksuite"> suite room
+                                <span class="bi bi-currency-rupee">4000/-</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--select amenties-->
+
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#amenities" data-bs-toggle="collapse">Select
+                    Amenities</button>
+
+            </div>
+            <div class="accordion-collapse collapse" id="amenities" data-bs-parent="#kfc">
+                <div class="accordion-body text-center">
+                    <div class="row">
+                        <div class="col">
+                            <img src="../public/images/ac.jpg" width="140px" height="140px" alt="">
+                            <div><input type="checkbox" id="chkac"> A/C
+                                <span class="bi bi-currency-rupee">1000/-</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <img src="../public/images/locker.jpg" width="140px" height="140px" alt="">
+                            <div><input type="checkbox" id="chklocker"> Locker
+                                <span class="bi bi-currency-rupee">300/-</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--advance amount-->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <button class="btn btn-dark w-100" data-bs-target="#advance" data-bs-toggle="collapse">Advance
+                    Amount</button>
+
+            </div>
+            <div class="accordion-collapse collapse" id="advance" data-bs-parent="#kfc">
+                <div class="acordin-body p-2 text-center">
+                    <label>Advance Amount</label>
+                    <input id="txtadvance" type="text" name="" id="" required>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--button for modal-->
+    <div class="text-center">
+        <button onclick="registerclick()" class="btn btn-dark mt-1 p-2 w-25 text-center" data-bs-target="#hotel"
+            data-bs-toggle="modal">Register</button>
+    </div>
+    <!--modal-->
+    <div class="modal" id="hotel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Your Bill Summary</h2>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <dl>
+                                <dt>Customer name</dt>
+                                <dd id="lblcustomer"></dd>
+                                <dt>Check in date</dt>
+                                <dd id="lbldate"></dd>
+                                <dt>Total no of days</dt>
+                                <dd id="lbldays"></dd>
+                                <dt>Total no of persons</dt>
+                                <dd id="lblperson"></dd>
+                                <dt>Room type</dt>
+                                <dd id="lblroom"></dd>
+                                <dt>Amenities</dt>
+                                <dd id="lblamenities"></dd>
+                                <dt>Advance amount</dt>
+                                <dd id="lbladvance"></dd>
+                                <dt>Total Amount</dt>
+                                <dd id="lbltotal"></dd>
+                                <dt>Balance amount</dt>
+                                <dd id="lblbalance"></dd>
+
+
+
+                            </dl>
+                        </div>
+                        <div class="col">
+                            <img id="imghotel" width="100%" height="200px" alt="">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

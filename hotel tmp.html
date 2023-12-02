@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+    <style>
+        section{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+        section .im{
+            background-color: white;
+            width: 250px;
+            padding: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192);
+            
+           
+        }
+        section img{
+            right: -40px;
+            width: 100%;
+            position: relative;
+        }
+        h1{
+            text-align: center;
+            font-size: 32px;
+            font-weight:  bold;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+        section #im{
+           
+            position: relative;
+           
+            right: -120px;
+            bottom: -10px;
+            font-size: 23px;
+            font-weight: bold;
+
+        
+        }
+        figcaption{
+            width: 80%;
+            font-size: 23px;
+            font-weight: bold;
+            margin-top: -50px;
+
+        }
+        header nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.619);
+            color: white;
+           position: sticky;
+           top: 0;
+            width: 100vw;
+        }
+        li:hover{
+            color: red;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            font-size: 18px;
+            font-family: Arial;
+        }
+        li{
+            margin-right: 35px;
+        }
+        .bi-search{
+            font-size: 20px;
+            margin-right: 50px;
+        }
+        header{
+            background-image: url('../public/images/hero-3.jpg.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            
+        }
+        header main{
+            width: 40%;
+            color: white;
+          padding-left: 30px;
+          padding-right: 20px;
+            display: flex;
+            text-align: center;
+            height: 89%;
+            
+            background-color: rgba(0, 0, 0, 0.603);
+        }
+        header main p{
+            font-size: 18px;
+            font-family: Arial;
+        }
+        .bt{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        #bt{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+           
+        }
+        article{
+            width: 100vw;
+            
+            margin-top: 130px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+        .bi-dot{
+            font-size: 30px;
+            color: red;
+        }
+        .bi-justify{
+            display: none;
+        }
+        #frm{
+            margin-top: 50px;
+            
+        }
+        #lim{
+            float: right;
+            margin-right: 10px;
+        
+        }
+        aside{
+            margin-top: 100px;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            background-color: rgba(0, 0, 0, 0.89);
+            color: grey;
+           height: 100%;
+            padding: 20px;
+            line-height: 35px;
+            font-family: Arial;
+            margin-top: 50px;
+            
+        }
+        footer ul{
+            display: block;
+            list-style: none;
+           
+        }
+        footer h2{
+            color: rgba(255, 255, 255, 0.918);
+            text-align: ;
+            margin-bottom: 50px;
+            font-size: 26px;
+        }
+        footer button{
+            width: 200px;
+            background-color: rgba(0, 0, 0, 0.26);
+            color: gray;
+            margin-top: 30px;
+            border: 1px solid grey;
+            padding: 5px;
+        }
+        .bi-twitter,.bi-facebook,.bi-instagram{
+            color: white;
+            font-size: 27px;
+            margin: 10px;
+        }
+        
+      @media screen and (max-width:700px)  {
+        header nav ul {
+           display:none;
+           }
+           .bi-justify{
+            display: block;
+           }
+        header{
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            
+        }
+        main{
+            text-align: center;
+             }
+             #bt{
+                width: 200px;
+             }
+           
+           
+        header nav ul li{
+            
+           
+        }
+        header nav{
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+            padding-left: 20px;
+           
+            
+        }
+        section{
+           flex-wrap: wrap;
+           margin-top: 100px;
+
+        }
+        .im{
+            margin-bottom: 20px;
+        }
+        article img{
+            
+            width: 50%;
+            margin: 30px;
+        }
+        article h2{
+            margin: 30px;
+           
+        }
+        article{
+            display: block;
+            margin-left: 20%;
+        }
+        aside{
+           flex-direction: column;
+           display: flex;
+          
+          
+        }
+        aside #frm{
+            display: block;
+            width: 100vw;
+            height: 100%;
+           
+           
+           
+        }
+        aside img{
+            width: 100vw;
+            
+        }
+        #ftr{
+            
+            display: block;
+            height: 100%;
+           
+
+        }
+       
+        
+        
+      }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h2>Caviar</h2>
+            <ul>
+                <li>Home</li>
+                <li>Pages</li>
+                <li>About us</li>
+                <li>Menue</li>
+                <li>Award</li>
+                <li>Testimonial</li>
+            </ul>
+            <span class="bi bi-justify"></span>
+            <span class="bi bi-search"></span>
+        </nav>
+        <main>
+            <div style="width: ;">
+                <div>
+            <h1>lorem ipsum</h1>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit est, minima voluptates aliquid ratione maiores accusamus ipsam possimus dolores pariatur facilis maxime quae fugit magnam odit velit, porro error hic.</p>
+            </div>
+           <div class="bt">
+           <button id="bt" class="btn btn-light"><span class="bi bi-dot"></span> reservation</button>
+           </div>
+            </div>
+        </main>
+    </header>
+
+    <h1>Special</h1>
+    <section>
+        <div class="im">
+            <div><img src="../public/images/dish-1.png.webp" alt="">
+                 <span id="im" class="badge bg-danger rounded-circle p-3">$45</span>
+                 </div>
+            <figcaption>lorem ispum doller site</figcaption>
+            
+        </div>
+        <div class="im">
+            <img src="../public/images/dish-2.png.webp" alt="">
+            <span id="im" class="badge bg-danger rounded-circle p-3">$45</span>
+            <figcaption>lorem ispum</figcaption>
+        </div>
+        <div class="im">
+            <img src="../public/images/dish-3.png.webp" alt="">
+            <span id="im" class="badge bg-danger rounded-circle p-3">$45</span>
+            <figcaption>lorem ispum doller site amet</figcaption>
+          
+        </div>
+    </section>
+
+    <article>
+    
+        <h2 style="font-size:32px ;font-weight: bold;">awards</h2>
+        <img src="../public/images/a-1.png.webp" width="100px" height="100px" alt="">
+        <img src="../public/images/a-2.png.webp" width="100px" height="100px" alt="">
+        <img src="../public/images/a-3.png.webp" width="100px" height="100px" alt="">
+        <img src="../public/images/a-4.png.webp" width="100px" height="100px" alt="">
+        <img src="../public/images/a-5.png.webp" width="100px" height="100px" alt="">
+        
+    </article>
+
+    <aside>
+        <img style="height: 410px;" title="  sed lobortis ante ante eget justo." id="lim" src="../public/images/waiter.webp" width="47%" alt="">
+
+
+    <form id="frm" class="form-control w-50 p-3 m-4 mt-4 bg-light">
+        <h2>reservation</h2>
+        <div class="d-flex ">
+        <input class="form-control me-3"  type="date" name="" id="" >
+        <input class="form-control"  type="datetime" name="" id="" placeholder="-- : -- --"> 
+        </div>
+        <div  class="d-flex mt-4 mb-4">
+        <input class="form-control me-3" type="text" placeholder="select person">
+        <input class="form-control" type="text" placeholder="last name"> 
+        </div>
+        <textarea class="form-control" name="" id="" cols="30" rows="4" placeholder="your message"></textarea>
+
+        <div class=" mt-4"><button class="btn btn-primary text-white p-3">reservation</button>
+        </div>
+
+    </form>
+
+    </aside>
+
+    <footer id="ftr">
+        <div>
+            <h2>Tasty</h2>
+            <p>
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </p>
+            <div>
+                
+            <span class="bi bi-twitter"></span>
+                
+            <span class="bi bi-facebook"></span>
+            <span class="bi bi-instagram"></span>
+            </div>
+        </div>
+        <div>
+            <h2>Opening Hours</h2>
+            <ul>
+                <li>Monday: 08: - 22:00</li>
+                <li>Tuesday: 08: - 22:00</li>
+                <li>Wednesday: 08: - 22:00</li>
+                <li>Thursday: 08: - 22:00</li>
+                <li>Friday: 08: - 22:00</li>
+                <li>Saturday: 08: - 22:00</li>
+                <li>Sunday: 08: - 22:00</li>
+            </ul>
+        </div>
+        <div class="ld">
+            <h2>Contact Information</h2>
+            <ul>
+                <li>198 West 21th Street,Suite </li>
+                <li>721 New York NY 10016</li>
+                <li>+ 1235 2355 98</li>
+                <li>info@yoursite.com></li>
+                <li>email@email.com</li>
+            </ul>
+        </div>
+        <div class="ld">
+           <h2>Newsletters</h2>
+           Far far away, behind the word mountains, far from the countries.
+           <button>Subscribe <span class="bi bi-share"></span></button>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
